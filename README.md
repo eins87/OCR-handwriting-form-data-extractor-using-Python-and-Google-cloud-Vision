@@ -16,26 +16,25 @@ Technologies used:
 
 ## Project Structure
 
-project
-
-├── app
-│   ├── templates
-│   │   └── "form jobsheet"_jobsheet_template.jpg
-│   ├── upload
-│   └── symbolic-wind.json
-├── static
-│   ├── db
-│   │   └── ocrdata.db
-│   ├── js
-│   │   └── dropzone_config.js
-│   └── style.css
-├── templates
-│   ├── index.html
-│   └── layout.html
-├── README.md
-├── align_image.py
-├── app.py
-└── requirements.txt
+project  
+├── app  
+│   ├── templates  
+│   │   └── "form jobsheet"_jobsheet_template.jpg  
+│   ├── upload  
+│   └── symbolic-wind.json  
+├── static  
+│   ├── db  
+│   │   └── ocrdata.db  
+│   ├── js  
+│   │   └── dropzone_config.js  
+│   └── style.css  
+├── templates  
+│   ├── index.html  
+│   └── layout.html  
+├── README.md  
+├── align_image.py  
+├── app.py  
+└── requirements.txt  
 
 ## How the webapps works?
 
