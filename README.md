@@ -3,7 +3,7 @@
 #### Description:
 this webapps is using python and google cloud vision to ocr handwriting "form jobsheet". this can be used to convert the physical "form jobsheet" to digital "form jobsheet", because the function is to OCR the handwriting text to standard computer character. The accuracy google cloud vision for ocr-ing handwriting text is pretty high.
 
-The upload folder is for hold the uploaded file "form jobsheet". in the "form jobsheet" it have many informations that is important for the company because it relatively to the history of the device.  app.py is the main application program, it include the route and methods for the webapps.
+The upload folder is for hold the uploaded file "form jobsheet". The "form jobsheet" have many informations that is important for the company because it relatively to the history of the device.  app.py is the main application program, it include the route and methods for the webapps.
 The app.py have two routes, index and upload,  index for handle the user interface of main page in webapps,  and upload for handle the upload proses and ocr-ing process including align uploaded image.
 
 Technologies used:
