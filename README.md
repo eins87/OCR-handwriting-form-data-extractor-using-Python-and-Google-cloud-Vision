@@ -50,7 +50,7 @@ this webapps using sqlite for store the data from respone google cloud vision AP
 - customer address
 - model device
 - serial number
-- technisian name
+- technician name
 - problem
 - solution
 
