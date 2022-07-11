@@ -19,7 +19,7 @@ Technologies used:
 project  
 ├── app  
 │   ├── templates  
-│   │   └── "form jobsheet"_jobsheet_template.jpg  
+│   │   └── form_jobsheet_template.jpg  
 │   ├── upload  
 │   └── symbolic-wind.json  
 ├── static  
