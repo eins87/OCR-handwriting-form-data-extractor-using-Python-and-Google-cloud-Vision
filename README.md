@@ -1,4 +1,4 @@
-# OCR handwriting "form jobsheet" data extractor using Python and Google cloud Vision
+# OCR handwriting "Form Jobsheet" data extractor using Python and Google Cloud Vision API
 #### Video Demo:  https://youtu.be/ocDpP9oc0Ko
 #### Description:
 this webapps is using python and google cloud vision to ocr handwriting "form jobsheet". this can be used to convert the physical "form jobsheet" or old "form jobsheet" to digital "form jobsheet", because the function is to ocr the handwriting text to standard computer character. and the accuracy from google cloud vision for ocr-ing handwriting text is pretty high.
