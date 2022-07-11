@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+
+<div class="container">
+    <h2>Extracted Form data</h2>
+    <div class="border border-dark">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Jobsheet No.</th>
+                    <th>Customer</th>
+                    <th>Address</th>
+                    <th>Model</th>
+                    <th>Serial</th>
+                    <th>Technician</th>
+                    <th>Problem</th>
+                    <th>Solution</th>
+                    <th>date</th>
+                </tr>
+            </thead>
+            <tbody style="height: 400px; overflow-y: scroll;">
+                {% for dataform in dataforms %}
+                <tr>
+                    <td>{{dataform.jobsheet_no}}</td>
+                    <td>{{dataform.cust_name}}</td>
+                    <td>{{dataform.cust_addr}}</td>
+                    <td>{{dataform.device_model}}</td>
+                    <td>{{dataform.serial_no}}</td>
+                    <td>{{dataform.tech_name}}</td>
+                    <td>{{dataform.problem}}</td>
+                    <td>{{dataform.solution}}</td>
+                    <td>{{dataform.date}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="container pt-3">
+    <h2>Upload Form to extract data</h2>
+    <div class="row">
+        <div class="col-3" style="min-width:250px;">
+            <div class="shadow p-3 mb-5 bg-white rounded text-wrap flex-grow-1">
+                    <!-- <form action="#" method="post" class="form"> -->
+                        <div class="dropzone dropzone-queue mb-2" id="kt_dropzonejs_example_3">
+
+                            <!--begin::Items-->
+                            <div class="dropzone-items wm-200px">
+                                <div class="dropzone-item" style="display:none">
+                                    <!--begin::File-->
+                                    <div class="dropzone-file">
+                                        <div class="dropzone-filename" title="some_image_file_name.jpg">
+                                            <span data-dz-name>some_image_file_name.jpg</span>
+                                            <strong>(<span data-dz-size>340kb</span>)</strong>
+                                        </div>
+
+                                        <div class="dropzone-error" data-dz-errormessage></div>
+                                    </div>
+                                    <!--end::File-->
+
+                                    <!--begin::Progress-->
+                                    <div class="dropzone-progress">
+                                        <div class="progress">
+                                            <div
+                                                class="progress-bar bg-primary"
+                                                role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-dz-uploadprogress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end::Progress-->
+
+                                    <!--begin::Toolbar-->
+                                    <div class="dropzone-toolbar">
+                                        <span class="dropzone-delete" data-dz-remove><i class="bi bi-x fs-1"></i></span>
+                                    </div>
+                                    <!--end::Toolbar-->
+                                </div>
+                            </div>
+                            <!--end::Items-->
+
+                            <!--begin::Hint-->
+                            <span class="form-text text-muted text-center">Max file size is 2MB.</span>
+                            <!--end::Hint-->
+                        </div>
+                    <!-- </form> -->
+            </div>
+            <script type='text/javascript' src='/static/js/dropzone_config.js'></script>
+        </div>
+        <div class="col-sm-9">
+            <div class="shadow p-3 mb-5 bg-white rounded text-wrap">
+                <dl class="row">
+                  <dt class="col-sm-3">Description</dt>
+                  <dd class="col-sm-9">
+                      <p>This is a webapps for finish my final project on </p>
+                      <p><a href="https://learning.edx.org/course/course-v1:HarvardX+CS50+X/home">CS50 course "Introduction to Computer Science"</a></p>
+                  </dd>
+
+                  <dt class="col-sm-3">Template</dt>
+                  <dd class="col-sm-9">
+                    <p>Please download this <a href="{{ url_for('download', filename='form_jobsheet_template.jpg') }}">template</a></p>
+                    <p>Fill each field and upload to extract data.</p>
+                  </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
