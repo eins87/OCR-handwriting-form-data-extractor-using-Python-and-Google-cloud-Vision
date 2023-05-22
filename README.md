@@ -64,3 +64,6 @@ this webapps using sqlite for store the data from respone google cloud vision AP
     e. rename the json file to symbolic-wind.json and put it in app folder
 2. run <code>pip install -r requirements.txt</code> to install needed libraries
 3. run <code>flask run</code>
+
+### Contact
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/andiwinata87/)
