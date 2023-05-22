@@ -57,11 +57,11 @@ this webapps using sqlite for store the data from respone google cloud vision AP
 ### How to launch application
 
 1. You need enable google cloud vision API on you google cloud console  
-    a. Go to [Google Cloud Platform](https://console.cloud.google.com/apis/library/vision.googleapis.com)  
-    b. Click enable  
-    c. Create service account, it will give you a json file which include your credential to use google cloud vision api  
-    d. Download the json file  
-    e. Rename the json file to symbolic-wind.json and put it in app folder  
+    - Go to [Google Cloud Platform](https://console.cloud.google.com/apis/library/vision.googleapis.com)  
+    - Click enable  
+    - Create service account, it will give you a json file which include your credential to use google cloud vision api  
+    - Download the json file  
+    - Rename the json file to symbolic-wind.json and put it in app folder  
 2. Run <code>pip install -r requirements.txt</code> to install needed libraries
 3. Run <code>flask run</code>
 
