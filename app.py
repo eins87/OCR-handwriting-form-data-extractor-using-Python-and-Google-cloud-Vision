@@ -98,33 +98,33 @@ def upload():
     count = 0
     # loop over the locations of the document we are going to OCR
     for loc in OCR_LOCATIONS:
-    	# extract the OCR ROI from the aligned image
-    	(x, y, w, h) = loc.bbox
-    	roi = aligned[y:y + h, x:x + w]
+        # extract the OCR ROI from the aligned image
+        (x, y, w, h) = loc.bbox
+        roi = aligned[y:y + h, x:x + w]
 
     	# OCR the ROI using Tesseract
-    	roi_image = cv2.cvtColor(roi, cv2.COLOR_BGR2RGB)
+        roi_image = cv2.cvtColor(roi, cv2.COLOR_BGR2RGB)
     	#text = pytesseract.image_to_string(rgb)
 
     	# saving roi
-    	print('[INFO] Saving ROI as image file...')
-    	cv2.imwrite(f'{file_align}_roi_{count}{file_ext}', roi_image)
-
-    	with io.open(f'{file_align}_roi_{count}{file_ext}', 'rb') as image_file:
-    	    content = image_file.read()
-
-    	# OCR using google cloud vision API
-    	image_google_vision = vision_v1.types.Image(content=content)
-    	response = client.document_text_detection(image=image_google_vision)
+        print('[INFO] Saving ROI as image file...')
+        cv2.imwrite(f'{file_align}_roi_{count}{file_ext}', roi_image)
+        
+        with io.open(f'{file_align}_roi_{count}{file_ext}', 'rb') as image_file:
+            content = image_file.read()
+        
+        # OCR using google cloud vision API
+        image_google_vision = vision_v1.types.Image(content=content)
+        response = client.document_text_detection(image=image_google_vision)
 
     	# get text
-    	docText = response.full_text_annotation.text
-    	parsingResults.append(docText)
+        docText = response.full_text_annotation.text
+        parsingResults.append(docText)
 
     	# remove file image roi
-    	print('[INFO] Deleting ROI image file...')
+        print('[INFO] Deleting ROI image file...')
     	#os.remove(f'{file_align}_roi_{count}{file_ext}')
-    	count += 1
+        count += 1
 
     # remove file align
     print('[INFO] Deleting align image file...')
