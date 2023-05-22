@@ -57,7 +57,7 @@ this webapps using sqlite for store the data from respone google cloud vision AP
 ### How to launch application
 
 1. you need enable google cloud vision API on you google cloud console  
-    a. Go to [Google Cloud Platform](https://console.cloud.google.com/apis/library/vision.googleapis.com) 
+    a. Go to [Google Cloud Platform](https://console.cloud.google.com/apis/library/vision.googleapis.com)  
     b. click enable  
     c. create service account, it will give you a json file which include your credential to use google cloud vision api  
     d. download the json file  
