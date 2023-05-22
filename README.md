@@ -1,6 +1,6 @@
-# OCR handwriting "Form Jobsheet" data extractor using Python and Google Cloud Vision API
-#### Video Demo:  https://youtu.be/ocDpP9oc0Ko
-#### Description:
+## OCR handwriting "Form Jobsheet" data extractor using Python and Google Cloud Vision API
+### Video Demo:  https://youtu.be/ocDpP9oc0Ko
+### Description:
 this webapps is using python and google cloud vision to ocr handwriting "form jobsheet". this can be used to convert the physical "form jobsheet" to digital "form jobsheet", because the function is to OCR the handwriting text to standard computer character. The accuracy google cloud vision for ocr-ing handwriting text is pretty high.
 
 The upload folder is for hold the uploaded file "form jobsheet". The "form jobsheet" have many informations that is important for the company because it relatively to the history of the device.  app.py is the main application program, it include the route and methods for the webapps.
@@ -15,7 +15,7 @@ Technologies used:
 - jquery
 - other libraries or packages
 
-## Project Structure
+### Project Structure
 
 project  
 ├── app  
@@ -37,7 +37,7 @@ project
 ├── app.py  
 └── requirements.txt  
 
-## How the webapps works?
+### How the webapps works?
 
 The user download "form jobsheet" template, print it and fill each field with handwriting then scan using scanner device or multi function printer which have scanner function as an image then upload it to web with drag or click on upload area, webapps wil crop the particular field which is defined before, and extract the informations and then save it to database.
 
@@ -54,9 +54,12 @@ this webapps using sqlite for store the data from respone google cloud vision AP
 - problem
 - solution
 
-## How to launch application
+### How to launch application
 
 1. you need enable google cloud vision API on you google cloud console
+```
+Go to ![Google Cloud Platform](https://console.cloud.google.com/apis/library/vision.googleapis.com)
+```
 2. create service account it will give you a json file which include your credential to use google cloud vision api
 3. run pip install -r requirements.txt to install needed libraries
 4. run command flask run
