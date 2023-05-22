@@ -57,9 +57,7 @@ this webapps using sqlite for store the data from respone google cloud vision AP
 ### How to launch application
 
 1. you need enable google cloud vision API on you google cloud console
-```
-Go to ![Google Cloud Platform](https://console.cloud.google.com/apis/library/vision.googleapis.com)
-```
-2. create service account it will give you a json file which include your credential to use google cloud vision api
-3. run pip install -r requirements.txt to install needed libraries
-4. run command flask run
+    a. Go to ![Google Cloud Platform](https://console.cloud.google.com/apis/library/vision.googleapis.com)
+    b. create service account it will give you a json file which include your credential to use google cloud vision api
+2. run pip install -r requirements.txt to install needed libraries
+3. run command flask run
